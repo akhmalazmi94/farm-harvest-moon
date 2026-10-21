@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KampungKu</title>
+    <meta name="description" content="KampungKu — permainan ladang kampung yang tenang, cozy dan lengkap." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="stat-card">
+          <span class="label">Hari</span>
+          <strong id="dayValue">1</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Cuaca</span>
+          <strong id="weatherValue">Cerah</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Wang</span>
+          <strong id="moneyValue">RM 150.00</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Tenaga</span>
+          <strong id="energyValue">10 / 10</strong>
+        </div>
+        <div class="stat-card tool-box">
+          <span class="label">Alat</span>
+          <strong id="selectedTool">TANGAN</strong>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="farm-panel">
+          <div class="farm-box">
+            <div class="farm-header">
+              <div>
+                <div class="eyebrow">Ladang KampungKu</div>
+                <h1>Tanam, Siram, Tuai</h1>
+              </div>
+
+              <div class="tool-row" aria-label="Pilihan alat">
+                <button class="tool-btn active" data-tool="hand">✋ Tangan</button>
+                <button class="tool-btn" data-tool="water">💧 Siram</button>
+                <button class="tool-btn" data-tool="plant">🌱 Tanam</button>
+              </div>
+            </div>
+
+            <div id="farmGrid" class="farm-grid" aria-label="Ladang"></div>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel">
+            <h3>Benih</h3>
+            <div id="seedPanel" class="seed-panel"></div>
+          </section>
+
+          <section class="panel">
+            <h3>Inventori</h3>
+            <div id="inventoryList" class="inventory-list"></div>
+          </section>
+
+          <section class="panel">
+            <h3>Warga Kampung</h3>
+            <div id="villagerList" class="villager-list"></div>
+          </section>
+
+          <section class="panel">
+            <h3>Log Kampung</h3>
+            <ul id="logList" class="log-list"></ul>
+          </section>
+        </aside>
+      </main>
+
+      <footer class="action-bar">
+        <div class="action-group">
+          <button id="buySeedBtn" class="primary-btn">🛒 Beli Benih</button>
+          <button id="nextDayBtn" class="secondary-btn">➡ Hari Seterusnya</button>
+        </div>
+        <div class="action-group status-box">
+          <span id="marketStatus">Jualan hari ini: tenang dan aman.</span>
+        </div>
+      </footer>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
